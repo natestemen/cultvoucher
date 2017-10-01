@@ -1,0 +1,166 @@
+\documentclass{cultvoucher}
+
+\usepackage[margin=0.6in]{geometry}
+\usepackage{setspace} %not sure if needed
+\usepackage{cultvoucher}
+% \usepackage{fancyhdr}
+\definecolor{OliveGreen}{rgb}{0.33, 0.42, 0.18}
+\usepackage[colorlinks=true,urlcolor=OliveGreen]{hyperref}
+\usepackage{stackengine}
+\usepackage[T1]{fontenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{newpxtext}
+\usepackage[document]{ragged2e}
+\usepackage{paracol}
+
+
+\renewcommand{\labelitemi}{--}
+
+
+\bibliography{pubs}
+\addtocategory{papers}{backgrounds,p20paper,czts}
+\addtocategory{presentations}{ceu15,gcurs16}
+\addtocategory{curpapers}{vortices}
+
+
+
+\begin{document}
+
+\begin{flushleft}
+    {\Huge{\textsc{\texttt{Nathaniel T. Stemen}}}}
+    
+    {\url{natestemen.github.io}}
+
+    {\href{mailto:nathanielstemen@gmail.com}{\nolinkurl{nathanielstemen@gmail.com}}}
+
+    \href{tel:447505439113}{\texttt{+44\,7505\,439113}}
+\end{flushleft}
+
+\vspace{-10pt}
+
+\columnratio{0.7}
+\begin{paracol}{2}
+
+\section{Work \& Research Experience}
+
+\lhsentry{Software Development/Data Science Intern}
+         {\href{https://www.overleaf.com/}{Overleaf}}
+         {Jul--Nov 2017}
+\begin{tightitemize}
+    \item Built framework using \keyword{pandas}, \keyword{sklearn}, and \keyword{scipy} to parse, mung, and analyze \TeX{} files to obtain data for new Overleaf autocomplete feature.
+    \item Using common patterns found in \TeX{} files, extended Overleaf's editor to support context-aware autocompletion by using a recommendation system.
+    % \item Main architect and maintainer of \url{docs.overleaf.com}
+\end{tightitemize}
+
+\lhsentry{Undergraduate Researcher}
+         {New York University}
+         {May 2016--May 2017}
+\begin{tightitemize}
+	\item Studied nonlinear Schr\"{o}dinger equations modeling transmission of short electromagnetic pulses in nonlinear media under Professor \href{https://www.sites.google.com/a/nyu.edu/luciano-medina/}{Luciano Medina}.
+	\item Numerically computed solutions using \keyword{numpy} to nonlinear PDE's and analytically proved existence of solutions.
+	\item Built package to numerically solve functional minimization problems.
+\end{tightitemize}
+
+\lhsentry{Summer Researcher}
+         {Yale University (\href{http://prospect.yale.edu/}{PROSPECT Experiment})}
+         {Summer \stackanchor{2014}{2015}}
+\begin{tightitemize}
+	\item Completed R\&D for detector that will perform eV-scale sterile neutrino search and measure the antineutrino spectrum from the nuclear reactor at Oak Ridge National Laboratory under Professor \href{http://heegerlab.yale.edu/karsten-heeger}{Karsten Heeger}.
+	\item Built optical simulation using SLitrani, and \keyword{C++} to model prototype detector to study light collection, detector uniformity, and optimize light guide shape.
+	\item Surveyed, and implemented pulse-shape discrimination methods in \keyword{Python} to determine optimal method for PROSPECT Experiment.
+\end{tightitemize}
+
+
+\switchcolumn
+
+
+\section{Education}
+\vspace{-0.9\topsep}
+\rhsentry{New York University}{2013--2017}{B.S. in Physics and Mathematics}
+\begin{tightitemize}
+    \item Thesis in Mathematics: \textit{An \mbox{Investigation} of $\mathcal{Q}$-Balls}
+    \item Dean's List
+    \item University Honors Scholar
+\end{tightitemize}
+\vspace{-2\topsep}
+
+\section{Skills}\vspace{-0.9\topsep}
+\rhsentry{Languages}
+         {most$\rightarrow$least}
+         {Python, CoffeeScript, JavaScript, Mathematica, MATLAB, C++}
+
+\rhsentry{Tools}
+         {}
+         {Git/Github, Bash, \LaTeX{}, Chebfun, HTML, CSS}
+
+% \rhsentry{Interests}{}{Cycling, (skate\!|\!snow)boarding, climbing, typography, books.}
+\vspace{-2\topsep}
+
+\section{Affiliations}\vspace{-0.9\topsep}
+\rhsentry{Sigma Pi Sigma}{2015--}{Physics Honors Society}
+
+\rhsentry{American Physical Society}{2014--}{}
+
+\rhsentry{NYU Society of Undergraduate Physicists}{2014--17}{President, Vice-President, and Secretary.}
+\vspace{-2\topsep}
+
+\end{paracol}
+\vspace{-0.3\topsep}
+
+\raggedright
+\columnratio{0.6}
+\begin{paracol}{2}
+
+\section{Publications}
+
+\printbib{curpapers}
+\printbib{papers}
+
+
+\switchcolumn
+
+
+\section{Talks \& Presentations}
+\printbib{presentations}
+
+\end{paracol}
+\vspace{-2\topsep}
+
+% \section{Professional Writing}
+% \subsection{Overleaf Blog}
+% \begin{itemize}
+% \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}\setlength{\parsep}{0pt}
+%     \item \href{https://www.overleaf.com/blog/523-a-data-driven-approach-to-latex-autocomplete}{A Data-Driven Approach to \LaTeX{} Autocomplete}
+% \end{itemize}
+% \subsection{Mostly Math (personal blog)}
+% \begin{itemize}
+% \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}\setlength{\parsep}{0pt}
+%     \item \href{https://natestemen.github.io/html/blog.html#}{Some Mathematics of Shuffling Cards}
+% \end{itemize}
+
+\section{Teaching Experience}
+\lhsentry{Mathematics Teacher}{NYU Metro Center College Prep Academy}{Jun-Aug 2016}
+\begin{tightitemize}
+	\item Independently planned and taught Pre-Calculus class for high school students.
+	\item Created and graded in class worksheets, quizzes, and homework.
+	\item Used the Moore Method to guide students through advanced topics and introduce the idea of rigor in mathematics.
+% 	\item Manager: Patricia Ryan-Canedo (\href{mailto:par3@nyu.edu}{\texttt{par3@nyu.edu}})
+\end{tightitemize}
+\vspace{\topsep}
+
+\lhsentry{Mathematics Tutor}{NYU Metro Center College Prep Academy}{Oct 2015--May 2017}
+\begin{tightitemize}
+	\item Facilitated numerous extra-curricular math courses of 30 students as a class assistant by providing additional guidance to students.
+	\item Specialized in tutoring Algebra II and Pre-Calculus, focusing on strong fundamentals.
+% 	\item Manager: Patricia Ryan-Canedo (\href{mailto:par3@nyu.edu}{\texttt{par3@nyu.edu}})
+\end{tightitemize}
+% \datedsubsection{Orientation Leader, NYU Tandon School of Engineering}{Aug--Sep \stackanchor{2014}{2015}}
+% \begin{itemize}
+% 	 \setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}\setlength{\parsep}{0pt}
+% 	\item Worked in teams of two guiding groups of 25 new students through NYU orientation week.
+% 	\item Organized, coordinated, and facilitated events encouraging new students to socialize and discover NYU.
+	
+% \end{itemize}
+
+
+\end{document}
