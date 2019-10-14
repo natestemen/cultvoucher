@@ -1,9 +1,8 @@
 \documentclass{cultvoucher}
 
-\usepackage[margin=0.6in]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage{setspace} % not sure if needed
 \usepackage{cultvoucher}
-% \usepackage{fancyhdr}
 \definecolor{OliveGreen}{rgb}{0.33, 0.42, 0.18}
 \usepackage[colorlinks=true,urlcolor=OliveGreen]{hyperref}
 \usepackage{stackengine}
@@ -11,7 +10,6 @@
 \usepackage[protrusion=true,expansion=true]{microtype}
 \usepackage{newpxtext}
 \usepackage[document]{ragged2e}
-\usepackage{paracol}
 
 
 \renewcommand{\labelitemi}{--}
@@ -26,83 +24,85 @@
 
 \begin{flushleft}
     {\Huge{\textsc{\texttt{Nathaniel T. Stemen}}}}
-    
-    {\href{https://natestemen.com}{\texttt{natestemen.com}} |
+
+    {\href{https://natestemen.xyz}{\texttt{natestemen.xyz}} |
     \href{mailto:nathanielstemen@gmail.com}{\nolinkurl{nathanielstemen@gmail.com}}} |
     \href{tel:12038154690}{\texttt{+1\,203\,815\,4690}}
 \end{flushleft}
 
-\vspace{-10pt}
 
-\columnratio{0.7}
-\begin{paracol}{2}
+\section{Education}
+\vspace{-0.9\topsep}
+\rhsentry{New York University}{2013--2017}{B.Sc. in Physics and Mathematics}
+\begin{tightitemize}
+    \item Thesis in Mathematics: \textit{An \mbox{Investigation} of \(\mathcal{Q}\)-Balls}
+    \item Dean's List
+    \item University Honors Scholar
+\end{tightitemize}
 
 \section{Work \& Research Experience}
 
-\lhsentry{Software Development/Data Science Intern}
+\lhsentry{Software Developer}
          {\href{https://www.overleaf.com/}{Overleaf}}
-         {Jul--Nov 2017}
+         {July 2017--current}
 \begin{tightitemize}
-    \item Built framework using \keyword{pandas}, \keyword{sklearn}, and
-          \keyword{scipy} to parse, mung, and analyze \TeX{} files to obtain
-          data for new Overleaf autocomplete feature.
-    \item Using common patterns found in \TeX{} files, extended Overleaf's
-          editor to support context-aware autocompletion by using a
-          recommendation system.
+    \item Provided data for and built new \LaTeX{} autocomplete feature.
+    \item Maintained large Rails and Node web applications by providing bug
+          fixes and feature improvements.
+    \item Provided company with data to use as a starting point for data driven
+          decisions on the companies business model and new feature development.
+    \item Attended conferences as a company representative to interact with and
+          gather customer feedback from Overleaf users.
 \end{tightitemize}
 
 \lhsentry{Undergraduate Researcher}
          {New York University}
          {May 2016--May 2017}
 \begin{tightitemize}
-	\item Studied nonlinear Schr\"{o}dinger equations modeling transmission of
+    \item Studied nonlinear Schr\"{o}dinger equations modeling transmission of
           short electromagnetic pulses in nonlinear media under Professor
-          \href{https://www.sites.google.com/a/nyu.edu/luciano-medina/}{Luciano Medina}.
-	\item Numerically computed solutions using \keyword{numpy} to nonlinear
-          PDE's and analytically proved existence of solutions.
-	\item Built package to numerically solve functional minimization problems.
+          \href{https://www.sites.google.com/a/nyu.edu/luciano-medina/}{Luciano Medina}
+          and \href{https://cims.nyu.edu/~esposito/}{Joseph Esposito}.
+    \item Numerically computed solutions to nonlinear partial differential
+          equations and analytically proved existence of solutions.
 \end{tightitemize}
 
 \lhsentry{Summer Researcher}
          {Yale University (\href{http://prospect.yale.edu/}{PROSPECT Experiment})}
-         {Summer \stackanchor{2014}{2015}}
+         {Summer 2014 \& 2015}
 \begin{tightitemize}
-	\item Completed R\&D for detector that will perform eV-scale sterile
-          neutrino search and measure the antineutrino spectrum from the
+    \item Completed R\&D for detector that is performing eV-scale sterile
+          neutrino search and measuring the antineutrino spectrum from the
           nuclear reactor at Oak Ridge National Laboratory under Professor
-          \href{http://heegerlab.yale.edu/karsten-heeger}{Karsten Heeger}.
-	\item Built optical simulation using SLitrani, and \keyword{C++} to model
-          prototype detector to study light collection, detector uniformity,
-          and optimize light guide shape.
-	\item Surveyed, and implemented pulse-shape discrimination methods in
-          \keyword{Python} to determine optimal method for PROSPECT Experiment.
+          \href{http://heegerlab.yale.edu/karsten-heeger}{Karsten Heeger} and
+          \href{https://www.physics.sjtu.edu.cn/en/people/1/kehan}{Ke Han}.
+    \item Built optical simulation using \keyword{C++} of a prototype detector
+          to study light collection, detector uniformity, and optimize light
+          guide shape.
+    \item Surveyed, and implemented pulse-shape discrimination methods in
+          \keyword{python} to determine optimal method for PROSPECT Experiment.
 \end{tightitemize}
 
-
-\switchcolumn
-
-
-\section{Education}
-\vspace{-0.9\topsep}
-\rhsentry{New York University}{2013--2017}{B.S. in Physics and Mathematics}
+\lhsentry{Orientation Leader}
+         {New York University}
+         {Summer 2014 \& 2015}
 \begin{tightitemize}
-    \item Thesis in Mathematics: \textit{An \mbox{Investigation} of
-          $\mathcal{Q}$-Balls}
-    \item Dean's List
-    \item University Honors Scholar
+    \item Worked with a partner orientation leader guiding groups of ~25 new
+          students through NYU's orientation week.
+    \item Organized, coordinated, and facilitated events encouraging new
+          students to socialize and discover NYU and NYC.
 \end{tightitemize}
-\vspace{-2\topsep}
+
 
 \section{Skills}\vspace{-0.9\topsep}
 \rhsentry{Languages}
-         {most$\rightarrow$least}
-         {Python, [Coffee|Java]Script, SQL, Ruby, Mathematica, MATLAB}
+         {}
+         {Python, JavaScript, SQL, Ruby, Mathematica, C++}
 
 \rhsentry{Tools}
          {}
          {git/Github, Bash, \LaTeX{}, Chebfun, HTML, CSS}
 
-% \rhsentry{Interests}{}{Cycling, (skate\!|\!snow)boarding, climbing, typography, books.}
 \vspace{-2\topsep}
 
 \section{Affiliations}\vspace{-0.9\topsep}
@@ -115,67 +115,37 @@
          {President, Vice-President, and Secretary.}
 \vspace{-2\topsep}
 
-\end{paracol}
-\vspace{-0.3\topsep}
-
-\raggedright
-\columnratio{0.6}
-\begin{paracol}{2}
 
 \section{Publications}
 
-% \printbib{curpapers}
 \printbib{papers}
-
-
-\switchcolumn
 
 
 \section{Talks \& Presentations}
 \printbib{presentations}
 
-\end{paracol}
 \vspace{-2\topsep}
 
-% \section{Professional Writing}
-% \subsection{Overleaf Blog}
-% \begin{itemize}
-% \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}\setlength{\parsep}{0pt}
-%     \item \href{https://www.overleaf.com/blog/523-a-data-driven-approach-to-latex-autocomplete}{A Data-Driven Approach to \LaTeX{} Autocomplete}
-% \end{itemize}
-% \subsection{Mostly Math (personal blog)}
-% \begin{itemize}
-% \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}\setlength{\parsep}{0pt}
-%     \item \href{https://natestemen.github.io/html/blog.html#}{Some Mathematics of Shuffling Cards}
-% \end{itemize}
 
 \section{Teaching Experience}
 \lhsentry{Mathematics Teacher}{NYU Metro Center College Prep Academy}{Jun--Aug 2016}
 \begin{tightitemize}
-	\item Independently planned and taught Pre-Calculus class for high school
+    \item Independently planned and taught Pre-Calculus course for high school
           students.
-	\item Created and graded in class worksheets, quizzes, and homework.
-	\item Used the Moore Method to guide students through advanced topics and
+    \item Created and graded in class worksheets, quizzes, and homework.
+    \item Used the Moore Method to guide students through advanced topics and
           introduce the idea of rigor in mathematics.
-% 	\item Manager: Patricia Ryan-Canedo (\href{mailto:par3@nyu.edu}{\texttt{par3@nyu.edu}})
+    \item Manager: Patricia Ryan-Canedo (\href{mailto:par3@nyu.edu}{\texttt{par3@nyu.edu}})
 \end{tightitemize}
 \vspace{\topsep}
 
 \lhsentry{Mathematics Tutor}{NYU Metro Center College Prep Academy}{Oct 2015--May 2017}
 \begin{tightitemize}
-	\item Facilitated numerous extra-curricular math courses of 30 students as
+    \item Facilitated numerous extra-curricular math courses of 30 students as
           a class assistant by providing additional guidance to students.
-	\item Specialized in tutoring Algebra II and Pre-Calculus, focusing on
-          strong fundamentals.
-% 	\item Manager: Patricia Ryan-Canedo (\href{mailto:par3@nyu.edu}{\texttt{par3@nyu.edu}})
+    \item Specialized in tutoring Algebra II and Pre-Calculus, focusing on
+          developing strong fundamentals.
+    \item Manager: Patricia Ryan-Canedo (\href{mailto:par3@nyu.edu}{\texttt{par3@nyu.edu}})
 \end{tightitemize}
-% \datedsubsection{Orientation Leader, NYU Tandon School of Engineering}{Aug--Sep \stackanchor{2014}{2015}}
-% \begin{itemize}
-% 	 \setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}\setlength{\parsep}{0pt}
-% 	\item Worked in teams of two guiding groups of 25 new students through NYU orientation week.
-% 	\item Organized, coordinated, and facilitated events encouraging new students to socialize and discover NYU.
-	
-% \end{itemize}
-
 
 \end{document}
