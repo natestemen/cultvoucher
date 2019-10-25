@@ -1,151 +1,192 @@
 \documentclass{cultvoucher}
-
-\usepackage[margin=1in]{geometry}
-\usepackage{setspace} % not sure if needed
 \usepackage{cultvoucher}
-\definecolor{OliveGreen}{rgb}{0.33, 0.42, 0.18}
-\usepackage[colorlinks=true,urlcolor=OliveGreen]{hyperref}
-\usepackage{stackengine}
-\usepackage[T1]{fontenc}
-\usepackage[protrusion=true,expansion=true]{microtype}
-\usepackage{newpxtext}
-\usepackage[document]{ragged2e}
+
+\addbibresource{pubs.bib}
+\addtocategory{papers}{backgrounds,p20paper}
+\addtocategory{books}{rudin}
+\addtocategory{professional}{autocomplete,ccc}
+\addtocategory{presentations}{ceu15,gcurs16,tug19}
+\addtocategory{workshops}{nyulatex}
 
 
-\renewcommand{\labelitemi}{--}
+\begin{document}\thispagestyle{firststyle}
 
-
-\bibliography{pubs}
-\addtocategory{papers}{backgrounds,p20paper,czts}
-\addtocategory{presentations}{ceu15,gcurs16}
-
-
-\begin{document}
-
-\begin{flushleft}
-    {\Huge{\textsc{\texttt{Nathaniel T. Stemen}}}}
-
-    {\href{https://natestemen.xyz}{\texttt{natestemen.xyz}} |
-    \href{mailto:nathanielstemen@gmail.com}{\nolinkurl{nathanielstemen@gmail.com}}} |
-    \href{tel:12038154690}{\texttt{+1\,203\,815\,4690}}
-\end{flushleft}
-
+\begin{adjustwidth}{\dimexpr-\marginparsep-\marginparwidth}{}
+\begin{center}
+    {\Huge \textsc{\texttt{Nathaniel T. Stemen}}\par}
+    % \href{https://natestemen.xyz}{\texttt{natestemen.xyz}} \textbullet{}
+    \href{mailto:nathanielstemen@gmail.com}{\texttt{nathanielstemen@gmail.com}} \textbullet{}
+    \href{tel:12038154690}{\texttt{+1\,203\,815\,4690}} \textbullet{}
+    Brooklyn, NY
+    \rule{\dimexpr\textwidth+\marginparsep+\marginparwidth}{0.4pt}\par
+\end{center}
+\end{adjustwidth}
+\vspace{-15pt}
 
 \section{Education}
-\vspace{-0.9\topsep}
-\rhsentry{New York University}{2013--2017}{B.Sc. in Physics and Mathematics}
-\begin{tightitemize}
-    \item Thesis in Mathematics: \textit{An \mbox{Investigation} of \(\mathcal{Q}\)-Balls}
-    \item Dean's List
+\rhsentry{New York University}{2013--2017}{B.Sc.\ in Physics and Mathematics}
+\begin{itemize}
+    \item Thesis in Mathematics: \href{https://github.com/natestemen/q-vortex-thesis}{\textit{An Investigation of \(\mathcal{Q}\)-Balls}}
+    \begin{itemize}
+          \item Advisor: Prof.\ Luciano Medina
+    \end{itemize}
+    \item Dean's List (\textit{cum laude})
     \item University Honors Scholar
-\end{tightitemize}
+\end{itemize}
 
-\section{Work \& Research Experience}
-
+\section{Employment \& Research}
 \lhsentry{Software Developer}
-         {\href{https://www.overleaf.com/}{Overleaf}}
+         {\href{https://www.overleaf.com/}{Overleaf}, London \& New York City}
          {July 2017--current}
-\begin{tightitemize}
-    \item Provided data for and built new \LaTeX{} autocomplete feature.
-    \item Maintained large Rails and Node web applications by providing bug
-          fixes and feature improvements.
-    \item Provided company with data to use as a starting point for data driven
-          decisions on the companies business model and new feature development.
+\begin{itemize}
+    \item Provided data for and built new \LaTeX{} autocomplete feature using
+          machine learning techniques such as cosine similarity, decision trees,
+          and neural networks.
+    \item Maintained large \keyword{Rails} and \keyword{Node} web applications
+          by providing bug fixes and feature improvements.
+    \item Collected and presented company data to use as a starting point for
+          data driven decisions on the companies business model and new feature
+          development.
     \item Attended conferences as a company representative to interact with and
           gather customer feedback from Overleaf users.
-\end{tightitemize}
+    \item Extracted and analyzed data for The Connected Culture of Collaboration
+          Report. An analysis of collaborative scholarly writing to be published
+          in 2020.
+\end{itemize}
 
 \lhsentry{Undergraduate Researcher}
          {New York University}
          {May 2016--May 2017}
-\begin{tightitemize}
+\begin{itemize}
     \item Studied nonlinear Schr\"{o}dinger equations modeling transmission of
-          short electromagnetic pulses in nonlinear media under Professor
+          short electromagnetic pulses in nonlinear media under Prof.\
           \href{https://www.sites.google.com/a/nyu.edu/luciano-medina/}{Luciano Medina}
-          and \href{https://cims.nyu.edu/~esposito/}{Joseph Esposito}.
+          and Dr.\ \href{https://cims.nyu.edu/~esposito/}{Joseph Esposito}.
     \item Numerically computed solutions to nonlinear partial differential
-          equations and analytically proved existence of solutions.
-\end{tightitemize}
+          equations using \keyword{python} and analytically proved existence of
+          solutions.
+\end{itemize}
 
 \lhsentry{Summer Researcher}
          {Yale University (\href{http://prospect.yale.edu/}{PROSPECT Experiment})}
-         {Summer 2014 \& 2015}
-\begin{tightitemize}
+         {Summers 2014 \& 2015}
+\begin{itemize}
     \item Completed R\&D for detector that is performing eV-scale sterile
           neutrino search and measuring the antineutrino spectrum from the
-          nuclear reactor at Oak Ridge National Laboratory under Professor
+          nuclear reactor at Oak Ridge National Laboratory under Prof.\
           \href{http://heegerlab.yale.edu/karsten-heeger}{Karsten Heeger} and
-          \href{https://www.physics.sjtu.edu.cn/en/people/1/kehan}{Ke Han}.
+          Dr.\ \href{https://www.physics.sjtu.edu.cn/en/people/1/kehan}{Ke Han}.
     \item Built optical simulation using \keyword{C++} of a prototype detector
           to study light collection, detector uniformity, and optimize light
           guide shape.
-    \item Surveyed, and implemented pulse-shape discrimination methods in
-          \keyword{python} to determine optimal method for PROSPECT Experiment.
-\end{tightitemize}
+    \item Surveyed and implemented pulse-shape discrimination methods in
+          \keyword{python} to determine optimal method for neutrino event
+          selection.
+\end{itemize}
 
 \lhsentry{Orientation Leader}
          {New York University}
-         {Summer 2014 \& 2015}
-\begin{tightitemize}
-    \item Worked with a partner orientation leader guiding groups of ~25 new
+         {Summers 2014 \& 2015}
+\begin{itemize}
+    \item Worked with a partner orientation leader guiding groups of 25 new
           students through NYU's orientation week.
     \item Organized, coordinated, and facilitated events encouraging new
           students to socialize and discover NYU and NYC.
-\end{tightitemize}
-
-
-\section{Skills}\vspace{-0.9\topsep}
-\rhsentry{Languages}
-         {}
-         {Python, JavaScript, SQL, Ruby, Mathematica, C++}
-
-\rhsentry{Tools}
-         {}
-         {git/Github, Bash, \LaTeX{}, Chebfun, HTML, CSS}
-
-\vspace{-2\topsep}
-
-\section{Affiliations}\vspace{-0.9\topsep}
-\rhsentry{Sigma Pi Sigma}{2015--}{Physics Honors Society}
-
-\rhsentry{American Physical Society}{2014--}{}
-
-\rhsentry{NYU Society of Undergraduate Physicists}
-         {2014--17}
-         {President, Vice-President, and Secretary.}
-\vspace{-2\topsep}
-
+\end{itemize}
 
 \section{Publications}
-
 \printbib{papers}
+\printbib{books}
+\printbib{professional}
 
-
-\section{Talks \& Presentations}
+\section{Talks}
 \printbib{presentations}
+\printbib{workshops}
 
-\vspace{-2\topsep}
-
-
-\section{Teaching Experience}
-\lhsentry{Mathematics Teacher}{NYU Metro Center College Prep Academy}{Jun--Aug 2016}
-\begin{tightitemize}
+\section{Teaching}
+\lhsentry{Mathematics Teacher}{NYU Metro Center College Prep Academy}{June--August 2016}
+\begin{itemize}
     \item Independently planned and taught Pre-Calculus course for high school
           students.
     \item Created and graded in class worksheets, quizzes, and homework.
     \item Used the Moore Method to guide students through advanced topics and
           introduce the idea of rigor in mathematics.
-    \item Manager: Patricia Ryan-Canedo (\href{mailto:par3@nyu.edu}{\texttt{par3@nyu.edu}})
-\end{tightitemize}
-\vspace{\topsep}
+\end{itemize}
 
-\lhsentry{Mathematics Tutor}{NYU Metro Center College Prep Academy}{Oct 2015--May 2017}
-\begin{tightitemize}
+\lhsentry{Mathematics Tutor}{NYU Metro Center College Prep Academy}{October 2015--May 2017}
+\begin{itemize}
     \item Facilitated numerous extra-curricular math courses of 30 students as
           a class assistant by providing additional guidance to students.
-    \item Specialized in tutoring Algebra II and Pre-Calculus, focusing on
-          developing strong fundamentals.
-    \item Manager: Patricia Ryan-Canedo (\href{mailto:par3@nyu.edu}{\texttt{par3@nyu.edu}})
-\end{tightitemize}
+\end{itemize}
+
+\section{Conferences Attended}
+\lhsentry{Joint Mathematics Meeting}{Denver, CO}{January 2020}
+
+\lhsentry{\href{https://www.tug.org/tug2019/}{\TeX{} Users Group}}{Palo Alto, CA}{August 2019}
+
+\lhsentry{Joint Mathematics Meeting}{Baltimore, MD}{January 2019}
+
+\lhsentry{MathFest}{Denver, CO}{August 2018}
+
+\lhsentry{\#FuturePub}{North Carolina State University}{April 2018}
+
+\lhsentry{\href{https://web.northeastern.edu/het/string_data/}{String Data}}{Northeastern University}{November 2017}
+
+\lhsentry{Gulf Coast Undergraduate Research Symposium}{Rice University}{October 2016}
+
+\lhsentry{Fall Meeting of the APS Division of Nuclear Physics}{Santa Fe, NM}{October 2015}
+
+\section{Affiliations}
+\rhsentry{Mathematical Association of America}{2018--current}{}
+
+\lhsentry{Sigma Pi Sigma}{Physics Honors Society}{2015--current}
+
+\rhsentry{American Physical Society}{2014--current}{}
+
+\lhsentry{Society of Undergraduate Physicists}
+         {President, Vice-President, Secretary.}
+         {2014--2017}
+\begin{itemize}
+      \item Planned weekly events with talks from students, alumni, professors,
+            and professionals.
+      \item Planned and organized fundraising events such as Fermi Estimation
+            where we had over 40 attendees.
+      \item Recorded minutes from weekly meetings and sent update emails to group.
+\end{itemize}
+
+\section{Academic Activities}
+\lhsentry{Readings in Spectral Graph Theory}{Courant Institute}{Spring 2017}
+\begin{itemize}
+    \item Met with group of 5 students and Professor weekly to discuss current
+          research topics in graph theory.
+\end{itemize}
+
+\lhsentry{Foundations and Philosophy of Quantum Mechanics}{NYU}{2016--2017}
+\begin{itemize}
+    \item Co-organized group of 15 students that met weekly to discuss the
+          mathematical and philosophical foundations of quantum mechanics at
+          NYU.
+\end{itemize}
+
+\section{Continued Education}
+\rhsentry{Docker Mastery: with Kubernetes \& Swarm from a Docker Captain}{}{}
+\begin{itemize}
+    \item Learned how to use Docker to build development environments with code
+          running in containers for interoperability.
+    \item Verification: \url{https://ude.my/UC-HGBK3LSJ}
+\end{itemize}
+\rhsentry{Presenting Data and Information}{November 2019}{}
+\begin{itemize}
+    \item Covered fundamental design strategies for information displays
+          such as tables, diagrams, charts, images, and other data
+          visualizations.
+    \item Taught by Edward Tufte.
+\end{itemize}
+
+\section{Languages}
+\begin{itemize}
+      \item Python, JavaScript, SQL, Ruby, Mathematica, C++, HTML
+      \item English (native), Mandarin Chinese (beginner)
+\end{itemize}
 
 \end{document}
