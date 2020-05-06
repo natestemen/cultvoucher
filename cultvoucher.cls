@@ -1,8 +1,8 @@
-\LoadClass[11pt]{article}
+\LoadClass[10pt]{article}
 
 \usepackage[
-    top=2.5cm,
-    bottom=2.5cm,
+    top=3cm,
+    bottom=3cm,
     left=6cm,
     right=2.5cm,
     marginparwidth=3cm,
@@ -62,7 +62,7 @@
 \fancyhead[C]{}
 \fancyhead[R]{}
 \renewcommand{\headrulewidth}{0.4pt}
-\fancyfoot[L]{November 2019}
+\fancyfoot[L]{February 2020}
 \fancyfoot[C]{}
 \fancyfoot[R]{\thepage{}\ of\ \pageref*{LastPage}}
 \renewcommand{\footrulewidth}{0.4pt}
@@ -70,7 +70,7 @@
 \fancypagestyle{firststyle}{
     \fancyhf{}
     \renewcommand{\headrulewidth}{0pt}
-    \fancyfoot[L]{November 2019}
+    \fancyfoot[L]{February 2020}
     \fancyfoot[R]{\thepage{}\ of\ \pageref*{LastPage}}
 }
 
