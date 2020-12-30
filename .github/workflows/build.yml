@@ -22,4 +22,4 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           port: ${{ secrets.PORT }}
           source: "main.pdf"
-          target: "~/latex/main.pdf"
+          target: "~/latex/"
