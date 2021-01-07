@@ -7,7 +7,8 @@
     right=2.5cm,
     marginparwidth=3cm,
     marginparsep=0.5cm,
-    reversemarginpar
+    reversemarginpar,
+    headheight=14pt
 ]{geometry}
 
 \NeedsTeXFormat{LaTeX2e}
@@ -49,6 +50,8 @@
 \RequirePackage{marginnote}
 \RequirePackage{enumitem}
 \RequirePackage{lastpage}
+\RequirePackage{datetime}
+\newdateformat{lowerdate}{\monthname[\THEMONTH] \THEYEAR}
 \setlist{noitemsep,leftmargin=*}
 
 \RequirePackage{fancyhdr}
@@ -62,7 +65,7 @@
 \fancyhead[C]{}
 \fancyhead[R]{}
 \renewcommand{\headrulewidth}{0.4pt}
-\fancyfoot[L]{February 2020}
+\fancyfoot[L]{\lowerdate\today}
 \fancyfoot[C]{}
 \fancyfoot[R]{\thepage{}\ of\ \pageref*{LastPage}}
 \renewcommand{\footrulewidth}{0.4pt}
@@ -70,7 +73,7 @@
 \fancypagestyle{firststyle}{
     \fancyhf{}
     \renewcommand{\headrulewidth}{0pt}
-    \fancyfoot[L]{February 2020}
+    \fancyfoot[L]{\lowerdate\today}
     \fancyfoot[R]{\thepage{}\ of\ \pageref*{LastPage}}
 }
 

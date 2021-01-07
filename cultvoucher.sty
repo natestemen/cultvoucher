@@ -2,8 +2,7 @@
 
 \usepackage[
     sorting      = ydnt,
-    bibstyle     = authoryear-comp,
-    maxnames     = 20,
+    bibstyle     = authoryear,
     giveninits   = true,
     uniquename   = init,
     dashed       = false,
@@ -13,17 +12,7 @@
     defernumbers = true]{biblatex}
 
 
-%\DeclareFieldFormat{url}{\url{#1}}
-\DeclareFieldFormat[article]{pages}{#1}
-\DeclareFieldFormat[inproceedings]{pages}{\lowercase{pp.}#1}
-\DeclareFieldFormat[incollection]{pages}{\lowercase{pp.}#1}
-\DeclareFieldFormat[article]{volume}{#1}
-\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
-\DeclareFieldFormat[article]{title}{\MakeCapital{#1}}
-%\DeclareFieldFormat[article]{url}{}
-\DeclareFieldFormat[inproceedings]{title}{#1}
-\DeclareFieldFormat{shorthandwidth}{#1}
-\DeclareFieldFormat{extrayear}{}
+\DeclareFieldFormat[article]{title}{#1}
 \DeclareFieldFormat[misc]{howpublished}{\textit{#1}}
 \DeclareFieldFormat[misc]{title}{#1}
 
@@ -41,29 +30,18 @@
 % Bibliography categories
 \newcommand{\makebibcategory}[2]{\DeclareBibliographyCategory{#1}
     \defbibheading{#1}{
-        \titlespacing{\subsection}{0pt}{\parskip}{-0.5\parskip}
-        \subsection*{\textbf{#2}}
+        \titlespacing{\subsection}{0pt}{\parskip}{0pt}
+        \subsection*{#2}
     }
 }
 
 \makebibcategory{books}{Books}
-\makebibcategory{other}{Other Research Papers}
 \makebibcategory{papers}{Refereed Research Papers}
-\makebibcategory{presentations}{Contributed Conference Presentations}
-\makebibcategory{invited}{Invited Conference Presentations}
-\makebibcategory{seminars}{Invited Seminars}
+\makebibcategory{presentations}{Conference Presentations}
 \makebibcategory{workshops}{Workshops}
-\makebibcategory{chapters}{Book chapters}
-\makebibcategory{conferences}{Conference Proceedings}
-\makebibcategory{techreports}{Unpublished working papers}
-\makebibcategory{bookreviews}{Book reviews}
-\makebibcategory{editorials}{Editorials}
-\makebibcategory{phd}{PhD thesis}
-\makebibcategory{subpapers}{Submitted Papers}
-\makebibcategory{curpapers}{Current Papers}
 \makebibcategory{professional}{Professional Writing}
 
-\setlength{\bibitemsep}{2.5pt}
+\setlength{\bibitemsep}{3.5pt}
 \setlength{\bibhang}{.8cm}
 
 \renewcommand*{\bibitem}{\addtocounter{papers}{1}\item \mbox{}\hskip-0.85cm\hbox to 0.85cm{\hfill\arabic{papers}.~~}}
@@ -82,7 +60,7 @@
 }
 
 % Counters for keeping track of papers
-\newcounter{papers}\setcounter{papers}{0}
+\newcounter{papers}   \setcounter{papers}{0}
 \newcounter{sumpapers}\setcounter{sumpapers}{0}
 
 \newcommand{\lastref}[1]{\addtocounter{#1}{\value{papers}}\setcounter{papers}{0}}
