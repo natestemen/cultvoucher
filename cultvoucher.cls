@@ -19,7 +19,6 @@
 \RequirePackage{soul}
 \RequirePackage{xcolor}
 
-% \definecolor{lightgray}{rgb}{0.96, 0.76, 0.76}
 \definecolor{lightgray}{rgb}{0.86, 0.86, 0.86}
 \definecolor{darkgray}{rgb}{0.3, 0.3, 0.3}
 \definecolor{keyword}{rgb}{1.0, 0.5, 0.5}
@@ -85,33 +84,6 @@
 \newcommand{\lhsentry}[3]{
     \textbf{#1}: #2\hfill\textcolor{darkgray}{\slshape #3}\par
 }
-
-
-% \newcommand{\education}[2]{#1 \hfill #2 \\}
-% \newcommand{\teaching}[3]{{#1 \hfill #2} \\ \textit{#3} \\} 
-% \newcommand{\prize}[2]{#1 \hfill #2 \\} 
-% \newcommand{\news}[3]{{#1 \hfill #2} \\ \textit{#3} \\}
-
-
-% \newcommand{\inlinemain}[1]{%
-% \color{subheadings}\fontsize{11pt}{13pt}\raleway{Medium} #1 \normalfont}
-
-% \newcommand{\inlineextra}[1]{%
-% \color{headings}\fontsize{10pt}{12pt}\raleway{Medium} #1 \normalfont}
-
-% \newcommand{\entryhead}[3]{%
-% \ifthenelse{\equal{#1}{}}{}{\subsection{#1}}%
-% \inlinemain{#2}%
-% \inlineextra{#3}%
-% \ifthenelse{\equal{#2}{}}{}{\\}%
-% \color{primary}}
-
-
-% \project[name]{link}{summary}{description}
-% \newcommand{\project}[4][]{%
-% \entryhead{#1}{#3}{\hfill #2}%
-% #4%
-% \sectionspace}
 
 % Emphasise a keyword.
 \newcommand{\keyword}[1]{\textbf{#1}}
