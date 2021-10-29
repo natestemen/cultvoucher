@@ -1,19 +1,28 @@
-name: Build LaTeX document
+name: Build and deploy CV
+
 on:
   push:
     branches:
       - main
+    paths:
+      - "**.tex"
+      - "**.cls"
+      - "**.sty"
+      - "**.bib"
+
 jobs:
-  build_latex:
+  issue_voucher:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Git repository
+      - name: Checking out this voucher
         uses: actions/checkout@v2
-      - name: Compile LaTeX document
+
+      - name: Compiling voucher
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
-      - name: copy file via ssh
+
+      - name: Copying voucher to server
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
