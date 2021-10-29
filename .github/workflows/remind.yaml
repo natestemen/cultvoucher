@@ -1,15 +1,15 @@
-name: Remind me to update CV
+name: Remind me to update voucher
+
 on:
   schedule:
-    - cron: "* * * * *"
-    # - cron: "0 0 1 */3 *"
+    - cron: "51 7 8 */3 *"
 
 permissions:
   issues: write
 
 jobs:
   remind:
-    name: Remind me to update my CV
+    name: Remind me to update my voucher
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
