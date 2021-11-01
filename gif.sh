@@ -16,7 +16,7 @@ for commit in $(git rev-list --reverse main); do
     convert -density 100 -background white -alpha off ${commit}.pdf ${commit}.png
     printf -v formatted_index "%05d" ${INDEX} # TODO: unlikely to have >99,999 commits, but...
     convert +append *.png ./${png_dir}/${formatted_index}.png
-    rm *.png ${commit}*
+    rm ${commit}*
 
     let INDEX=${INDEX}+1
 done
