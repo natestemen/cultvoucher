@@ -2,6 +2,7 @@
 
 png_dir=pngs
 mkdir $png_dir
+cp .latexmkrc latexmkrc
 
 INDEX=0
 for commit in $(git rev-list --reverse main); do
