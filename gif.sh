@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 png_dir=pngs
 mkdir $png_dir
 cp .latexmkrc latexmkrc
