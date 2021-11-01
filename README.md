@@ -18,6 +18,8 @@ This repo also has two uses of [Github Actions](https://github.com/features/acti
 These are done in [`build.yaml`](./.github/workflows/build.yaml) and [`remind.yaml`](./.github/workflows/remind.yaml) respectively.
 They have saved me a lot of `ssh`-ing which if I can avoid, I will.
 
+I've also written a script [`gif.sh`](./gif.sh) to generate the following gif using the git history.
+
 ## A brief history
 
 ![an animated history of this CV](./anim.gif)
