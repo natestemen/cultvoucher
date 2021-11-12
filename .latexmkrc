@@ -6,5 +6,3 @@ my @clean_ext = qw(
   bbl
 );
 $clean_ext = join ' ', @clean_ext;
-
-$success_cmd = "latexmk -c";
