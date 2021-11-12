@@ -12,6 +12,17 @@
 
 \begin{document}\thispagestyle{firststyle}
 
+\newgeometry{
+	top=2cm,
+	bottom=3cm,
+	left=6cm,
+	right=2.5cm,
+	marginparwidth=3cm,
+	marginparsep=0.5cm,
+	reversemarginpar,
+	headheight=14pt
+}
+
 \begin{adjustwidth}{\dimexpr-\marginparsep-\marginparwidth}{}
 	\begin{center}
 		{\HUGE \textsc{\texttt{Nathaniel T. Stemen}}\par}
@@ -70,6 +81,8 @@
 \section{Publications}
 \printbib{papers}
 \printbib{professional}
+
+\restoregeometry
 
 \section{Talks}
 \printbib{presentations}
