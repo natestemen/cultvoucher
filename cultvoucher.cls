@@ -4,18 +4,14 @@
 \LoadClass[10pt]{article}
 
 \usepackage[
-    top=3cm,
-    bottom=3cm,
-    left=6cm,
-    right=2.5cm,
-    marginparwidth=3cm,
-    marginparsep=0.5cm,
-    reversemarginpar,
-    headheight=14pt
+    top    = 2cm,
+    bottom = 3cm,
+    left   = 5cm,
+    right  = 2cm,
 ]{geometry}
 
+\renewcommand{\baselinestretch}{1.1} 
 
-\RequirePackage{xhfill}
 \RequirePackage{soul}
 \RequirePackage{xcolor}
 
@@ -31,54 +27,67 @@
 \newcommand{\website}[1]{\href{https://#1}{\texttt{#1}}}
 \newcommand{\separator}{{\scriptsize\textbullet{}}}
 
-\setul{-.4ex}{0.8ex}
+\setul{-0.5ex}{0.9ex}
 \setulcolor{lightgray}
 
 \RequirePackage[explicit]{titlesec}
 
-\newcommand*{\raisedrulefill}[1]{%
-    \leaders\hbox{\textcolor{lightgray}{\rule[0.323ex]{0.5pt}{0.5pt}}}\hfill
-}
-
-\titleformat{\section}[block]
+\titleformat{\section}[leftmargin]
             {\Large\scshape}
             {}
             {0pt}
-            {\marginnote{\raggedright\ul{#1}\raisedrulefill}}
-\titlespacing{\section}{0pt}{\baselineskip}{0pt}
+            {\ul{#1}}
+\titlespacing{\section}{80pt}{0pt}{0pt}
 
+\titleformat{\subsection}[runin]
+            {\large\bfseries}
+            {}
+            {0pt}
+            {#1}
+\titlespacing{\subsection}{0pt}{0pt}{0.5em}
 
-\RequirePackage{parskip}
+\titleformat{\subsubsection}[runin]
+            {\bfseries}
+            {}
+            {0pt}
+            {#1}
+\titlespacing{\subsubsection}{0pt}{0pt}{0.5em}
+
 \RequirePackage[strict]{changepage}
-\RequirePackage{marginnote}
 \RequirePackage{enumitem}
 \RequirePackage{lastpage}
 \RequirePackage{datetime}
 \newdateformat{lowerdate}{\monthname[\THEMONTH] \THEYEAR}
-\setlist{noitemsep,leftmargin=*}
+\setlist{nosep}
 
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
 \fancyfoot[L]{\lowerdate\today}
 \fancyfoot[C]{}
 \fancyfoot[R]{\thepage{}\ of\ \pageref*{LastPage}}
-\renewcommand{\footrulewidth}{0.4pt}
 
-\fancypagestyle{firststyle}{
-    \fancyhf{}
-    \fancyfoot[L]{\lowerdate\today}
-    \fancyfoot[R]{\thepage{}\ of\ \pageref*{LastPage}}
+
+\RequirePackage{xparse}
+\ExplSyntaxOn
+\NewDocumentEnvironment{entry} { m m m o o } {
+    \subsection{#1:} #2 \hfill \textcolor{darkgray}{\slshape #3}\par
+    \IfNoValueTF{#4}{}{#4}
+    \IfNoValueTF{#5}{\begin{itemize}[itemsep=3pt,topsep=4pt]}{}
+    }
+    {
+    \IfNoValueTF{#5}{\end{itemize}}{}
+    }
+\ExplSyntaxOff
+
+\newcommand{\secitem}[3]{
+    \subsubsection{#1} #2\hfill \textcolor{darkgray}{\slshape #3}\par
 }
 
-\newcommand{\rhsentry}[3]{
-    \textbf{#1}\hfill\textcolor{darkgray}{\slshape #2}\par
-    #3
-}
-
-\newcommand{\lhsentry}[3]{
-    \textbf{#1}: #2\hfill\textcolor{darkgray}{\slshape #3}\par
+\newcommand{\graydate}[1]{
+    \textcolor{darkgray}{\slshape #1}
 }
 
 % Emphasise a keyword.

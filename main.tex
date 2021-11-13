@@ -1,6 +1,8 @@
 \documentclass{cultvoucher}
 \usepackage{cultvoucher}
 \usepackage{moresize}
+\usepackage{booktabs}
+\usepackage{bookmark}
 
 \addbibresource{pubs.bib}
 \addtocategory{papers}{backgrounds,p20paper}
@@ -10,75 +12,51 @@
 
 \renewcommand{\labelitemi}{\separator}
 
-\begin{document}\thispagestyle{firststyle}
-
-\newgeometry{
-	top=2cm,
-	bottom=3cm,
-	left=6cm,
-	right=2.5cm,
-	marginparwidth=3cm,
-	marginparsep=0.5cm,
-	reversemarginpar,
-	headheight=14pt
-}
+\begin{document}
 
 \begin{adjustwidth}{\dimexpr-\marginparsep-\marginparwidth}{}
 	\begin{center}
-		{\HUGE \textsc{\texttt{Nathaniel T. Stemen}}\par}
-		\email{nate@stemen.email} \; \separator \; \website{natestemen.xyz}
+		\textsc{\texttt{\HUGE Nathaniel T. Stemen}}
+
+		\email{nate@stemen.email} \separator{} \website{natestemen.xyz}
 	\end{center}
 \end{adjustwidth}
 
 \section{Education}
-\lhsentry{University of Waterloo}{Ph.D.\ in Applied Mathematics}{2020--now}
 
-\lhsentry{New York University}{B.Sc.\ in Mathematics and Physics}{2013--2017}
-\begin{itemize}
-	\vspace{-0.25em}
-	\item Thesis: \href{https://natestemen.xyz/qv-thesis.pdf}{\textit{An Investigation of $\mathcal{Q}$-Balls}} (Advisor Prof.\ Luciano Medina)
-\end{itemize}
+\begin{entry}{University of Waterloo}{Ph.D.\ in Applied Mathematics}{2020--now}[][none]
+\end{entry}
+
+\begin{entry}{New York University}{B.Sc.\ in Mathematics and Physics}{2013--2017}
+	\item Thesis: \href{https://natestemen.xyz/qv-thesis.pdf}{\textit{An Investigation of $\mathcal{Q}$-Balls}} % (Advisor Prof.\ Luciano Medina)
+	\item Advisor: Prof.\ Luciano Medina
+\end{entry}
 
 \section{Employment}
-\lhsentry{Content Development Specialist}{\href{https://www.overleaf.com/}{Overleaf}}
-{Oct 2021--now}
-\begin{itemize}
-	\vspace{-0.25em}
+\begin{entry}{Content Development Specialist}{Overleaf}{Oct 2021--now}
 	\item Initiated and developed \LaTeX{} related posts for companies Instagram account.
 	\item Wrote and improved Overleaf and \LaTeX{} documentation with a focus on student oriented content.
-\end{itemize}
-\lhsentry{Software Developer}{\href{https://www.overleaf.com/}{Overleaf}}
-{Jul 2017--Oct 2021}
-\vspace{-0.25em}
-\emph{Transitioned from full to part-time starting August 2020 while completing Ph.D.}
-\begin{itemize}
-	\vspace{-0.25em}
+\end{entry}
+
+\begin{entry}{Software Developer}{Overleaf}{Jul 2017--Oct 2021}[\emph{Transitioned from full to part-time starting August 2020 while completing Ph.D.}]
 	\item Provided data for and improved \LaTeX{} autocomplete feature using statistical analyses.
 	\item Maintained large \keyword{Rails} and \keyword{Node} web applications by providing bug fixes and feature improvements.
 	\item Monitored and maintained data-migration from \keyword{PostgresQL} to \keyword{MongoDB}.
 	\item Developed career ladder with working group to help promote equity and continuity with growing company.
-\end{itemize}
+\end{entry}
 
-\lhsentry{Summer Researcher}{New York University}{Summer 2016}
-\begin{itemize}
-	\vspace{-0.25em}
+\begin{entry}{Summer Researcher}{New York University}{Summer 2016}
 	\item Numerically computed solutions to nonlinear Schr\"{o}dinger equations modeling transmission of short electromagnetic pulses in nonlinear media using \keyword{python}.
-\end{itemize}
+\end{entry}
 
-\lhsentry{Summer Researcher}
-{Yale University (\href{http://prospect.yale.edu/}{\small{PROSPECT Experiment}})}
-{Summer 2014 \& 2015}
-\begin{itemize}
-	\vspace{-0.25em}
+\begin{entry}{Summer Researcher}{Yale University (\textsc{PROSPECT} Experiment)}{Summer 2014 \& 2015}
 	\item Built optical simulation of prototype detector in \keyword{C++} to study light collection, detector uniformity, and optimize light guide shape.
 	\item Surveyed and implemented pulse-shape discrimination methods in \keyword{python} to determine optimal method for neutrino event selection.
-\end{itemize}
+\end{entry}
 
-\section{Publications}
+\section{Publications} % TODO the spacing after headings is larger than other parts of doc
 \printbib{papers}
 \printbib{professional}
-
-\restoregeometry
 
 \section{Talks}
 \printbib{presentations}
@@ -86,68 +64,58 @@
 
 \section{Teaching}
 
-\lhsentry{Fundamentals of University Teaching}{University of Waterloo}{2020--now}
+\secitem{Fundamentals of University Teaching}{University of Waterloo}{2020--now}
 \begin{itemize}
-	\vspace{-0.25em}
 	\item Completing program designed to help graduate students learn evidence-based strategies of teaching through workshops and practice teaching sessions.
 \end{itemize}
 
-\lhsentry{Mathematics Teacher}{{\small NYU Metro Center College Prep Academy}}{Jun--Aug 2016}
+\secitem{Mathematics Teacher}{{\small NYU Metro Center College Prep Academy}}{Jun--Aug 2016}
 \begin{itemize}
-	\vspace{-0.25em}
 	\item Independently planned and taught Pre-Calculus course for high school students.
 \end{itemize}
 
-\lhsentry{Mathematics Tutor}{{\small NYU Metro Center College Prep Academy}}{Oct 2015--May 2017}
+\secitem{Mathematics Tutor}{{\small NYU Metro Center College Prep Academy}}{Oct 2015--May 2017}
 \begin{itemize}
-	\vspace{-0.25em}
 	\item Facilitated numerous extra-curricular math courses of 30 students as a class assistant by providing additional guidance to students.
 \end{itemize}
 
 \section{Conferences Attended}
-\lhsentry{\href{https://www.qubitbyqubit.org/conference}{Diversity in Quantum Computer}}{Online}{Feb 2021}
-
-\lhsentry{Joint Mathematics Meeting}{Denver, CO}{Jan 2020}
-
-\lhsentry{\href{https://www.tug.org/tug2019/}{\TeX{} Users Group}}{Palo Alto, CA}{Aug 2019}
-
-\lhsentry{Joint Mathematics Meeting}{Baltimore, MD}{Jan 2019}
-
-\lhsentry{MathFest}{Denver, CO}{Aug 2018}
-
-\lhsentry{\#FuturePub}{North Carolina State University}{Apr 2018}
-
-\lhsentry{\href{https://web.northeastern.edu/het/string_data/}{String Data}}{Northeastern University}{Nov 2017}
-
-\lhsentry{Gulf Coast Undergraduate Research Symposium}{Rice University}{Oct 2016}
-
-\lhsentry{Fall Meeting of the APS Division of Nuclear Physics}{Santa Fe, NM}{Oct 2015}
+\begin{center}
+	\begin{tabular*}{\textwidth}{ll@{\extracolsep{\fill}}r}
+		Conference                                & Location                        & Date                \\ \toprule
+		Diversity in Quantum Computing            & Online                          & \graydate{Feb 2021} \\
+		Joint Mathematics Meeting                 & Denver, CO                      & \graydate{Jan 2020} \\
+		\TeX{} Users Group                        & Palo Alto, CA                   & \graydate{Aug 2019} \\
+		Joint Mathematics Meeting                 & Baltimore, MD                   & \graydate{Jan 2019} \\
+		MathFest                                  & Denver, CO                      & \graydate{Aug 2018} \\
+		\#FuturePub                               & North Carolina State University & \graydate{Apr 2018} \\
+		String Data                               & Northeastern University         & \graydate{Nov 2017} \\
+		Undergraduate Research Symposium          & Rice University                 & \graydate{Oct 2016} \\
+		Fall Meeting of the APS (Nuclear Physics) & Santa Fe, NM                    & \graydate{Oct 2015}
+	\end{tabular*}
+\end{center}
 
 \section{Affiliations}
-\rhsentry{American Mathematical Society}{2019--now}{}
-
-\rhsentry{Mathematical Association of America}{2018--now}{}
-
-\lhsentry{Sigma Pi Sigma}{Physics Honors Society}{2015--now}
-
-\rhsentry{American Physical Society}{2014--2017}{}
-
-\rhsentry{Society of Undergraduate Physicists}{2014--2017}
+\secitem{American Mathematical Society}{}{2019--now}
+\secitem{Mathematical Association of America}{}{2018--now}
+\secitem{Sigma Pi Sigma}{(Physics honor society)}{2015--now}
+\secitem{American Physical Society}{}{2014--2017}
+\secitem{Society of Undergraduate Physicists}{}{2014--2017}
 
 \section{Service}
-\lhsentry{Equity, Diversity and Inclusion Committee}{{\small University of Waterloo; IQC}}{2021--now}
+\secitem{Equity, Diversity and Inclusion Committee}{University of Waterloo; IQC}{2021--now}
 
-\lhsentry{Strategic Plan Implementation Working Group}{{\small University of Waterloo}}{Jan--Sep 2021}
+\secitem{Strategic Plan Implementation Working Group}{University of Waterloo}{Jan--Sep 2021}
 \begin{itemize}
 	\item Working with the mathematics department to attract and retain people of high potential and accomplishment as well as foster student, staff, and faculty wellbeing.
 \end{itemize}
 
-\lhsentry{Foundations and Philosophy of Quantum Mechanics}{NYU}{2016--2017}
+\secitem{Foundations and Philosophy of Quantum Mechanics}{NYU}{2016--2017}
 \begin{itemize}
 	\item Co-organized group of 15 students that met weekly to discuss the mathematical and philosophical foundations of quantum mechanics.
 \end{itemize}
 
-\lhsentry{Orientation Leader}{NYU}{Summer 2014 \& 2015}
+\secitem{Orientation Leader}{NYU}{Summer 2014 \& 2015}
 \begin{itemize}
 	\item Organized, coordinated, and facilitated events encouraging new students to socialize and discover NYU and NYC.
 \end{itemize}

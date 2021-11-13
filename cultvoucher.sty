@@ -16,10 +16,6 @@
 \DeclareFieldFormat[misc]{howpublished}{\textit{#1}}
 \DeclareFieldFormat[misc]{title}{#1}
 
-% No dot before number of articles
-% \usepackage{xpatch}
-% \xpatchbibmacro{volume+number+eid}{\setunit*{\adddot}}{}{}{}
-
 % Remove In: for an article.
 \renewbibmacro{in:}{
     \ifentrytype{article}{}{
@@ -28,10 +24,10 @@
 }
 
 % Bibliography categories
-\newcommand{\makebibcategory}[2]{\DeclareBibliographyCategory{#1}
+\newcommand{\makebibcategory}[2]{
+    \DeclareBibliographyCategory{#1}
     \defbibheading{#1}{
-        \titlespacing{\subsection}{0pt}{\parskip}{0pt}
-        \subsection*{#2}
+        \subsection{#2}
     }
 }
 
@@ -41,8 +37,8 @@
 \makebibcategory{workshops}{Workshops}
 \makebibcategory{professional}{Professional Writing}
 
-\setlength{\bibitemsep}{3.5pt}
-\setlength{\bibhang}{.8cm}
+\setlength{\bibitemsep}{3pt}
+\setlength{\bibhang}{.9cm}
 
 \renewcommand*{\bibitem}{\addtocounter{papers}{1}\item \mbox{}\hskip-0.85cm\hbox to 0.85cm{\hfill\arabic{papers}.~~}}
 \defbibenvironment{bibliography}
