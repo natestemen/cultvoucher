@@ -24,7 +24,7 @@
 \definecolor{keyword}{rgb}{1.0, 0.5, 0.5}
 \definecolor{olive}{rgb}{0.33, 0.42, 0.18}
 \RequirePackage[colorlinks=true,urlcolor=olive]{hyperref}
-\RequirePackage[protrusion=true,expansion=true]{microtype}
+\RequirePackage{microtype}
 \RequirePackage{newpxtext}
 
 \newcommand{\email}[1]{\href{mailto:#1}{\texttt{#1}}}
