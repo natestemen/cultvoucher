@@ -27,6 +27,10 @@
 \RequirePackage[protrusion=true,expansion=true]{microtype}
 \RequirePackage{newpxtext}
 
+\newcommand{\email}[1]{\href{mailto:#1}{\texttt{#1}}}
+\newcommand{\website}[1]{\href{https://#1}{\texttt{#1}}}
+\newcommand{\separator}{{\scriptsize\textbullet{}}}
+
 \setul{-.4ex}{0.8ex}
 \setulcolor{lightgray}
 
