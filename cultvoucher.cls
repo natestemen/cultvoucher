@@ -58,16 +58,9 @@
 \setlist{noitemsep,leftmargin=*}
 
 \RequirePackage{fancyhdr}
-\setlength{\headwidth}{\dimexpr\textwidth+\marginparsep+\marginparwidth}
-% \fancyhead{}
-% \renewcommand{\headrule}{}
-
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{Nathaniel T. Stemen}
-\fancyhead[C]{}
-\fancyhead[R]{}
-\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0pt}
 \fancyfoot[L]{\lowerdate\today}
 \fancyfoot[C]{}
 \fancyfoot[R]{\thepage{}\ of\ \pageref*{LastPage}}
@@ -75,7 +68,6 @@
 
 \fancypagestyle{firststyle}{
     \fancyhf{}
-    \renewcommand{\headrulewidth}{0pt}
     \fancyfoot[L]{\lowerdate\today}
     \fancyfoot[R]{\thepage{}\ of\ \pageref*{LastPage}}
 }
