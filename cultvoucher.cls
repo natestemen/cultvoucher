@@ -1,3 +1,6 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{cultvoucher}[11/13/2021 custom CV class]
+
 \LoadClass[10pt]{article}
 
 \usepackage[
@@ -11,9 +14,6 @@
     headheight=14pt
 ]{geometry}
 
-\NeedsTeXFormat{LaTeX2e}
-
-\ProvidesClass{cultvoucher}[3/13/2016 custom CV class]
 
 \RequirePackage{xhfill}
 \RequirePackage{soul}
