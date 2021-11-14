@@ -1,6 +1,7 @@
 .DS_Store
 *.aux
 *.bbl
+*.bcf
 *.blg
 *.dvi
 *.log

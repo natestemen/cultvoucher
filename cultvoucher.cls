@@ -11,6 +11,11 @@
 ]{geometry}
 
 \renewcommand{\baselinestretch}{1.1} 
+\renewcommand{\labelitemi}{\separator}
+
+\RequirePackage{cultvoucher}
+\RequirePackage{moresize}
+\RequirePackage{booktabs}
 
 \RequirePackage{soul}
 \RequirePackage{xcolor}
@@ -22,6 +27,7 @@
 \RequirePackage[colorlinks=true,urlcolor=olive]{hyperref}
 \RequirePackage{microtype}
 \RequirePackage{newpxtext}
+\RequirePackage{bookmark}
 
 \newcommand{\email}[1]{\href{mailto:#1}{\texttt{#1}}}
 \newcommand{\website}[1]{\href{https://#1}{\texttt{#1}}}
@@ -76,10 +82,9 @@
     \subsection{#1:} #2 \hfill \textcolor{darkgray}{\slshape #3}\par
     \IfNoValueTF{#4}{}{#4}
     \IfNoValueTF{#5}{\begin{itemize}[itemsep=3pt,topsep=4pt]}{}
-    }
-    {
+}{
     \IfNoValueTF{#5}{\end{itemize}}{}
-    }
+}
 \ExplSyntaxOff
 
 \newcommand{\secitem}[3]{
