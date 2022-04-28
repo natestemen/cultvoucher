@@ -1,4 +1,4 @@
-# *C*ult *V*oucher
+****# *C*ult *V*oucher
 
 My CV which will get me jobs/opportunities because it looks hot af and my name is pretty white.
 Please use this, and give me credit if you want, but pretty sure I stole half of this from other people, so do what you want.
@@ -18,8 +18,8 @@ This repo also has two uses of [Github Actions](https://github.com/features/acti
 These are done in [`build.yaml`](./.github/workflows/build.yaml) and [`remind.yaml`](./.github/workflows/remind.yaml) respectively.
 They have saved me a lot of `ssh`-ing which if I can avoid, I will.
 
-I've also written a script [`gif.sh`](./gif.sh) to generate the following gif using the git history.
-
 ## A brief history
+
+I've also written a script [`gif.sh`](./gif.sh) to generate the following gif using the git history.
 
 ![an animated history of this CV](./.github/anim.gif)
