@@ -22,4 +22,4 @@ I've also written a script [`gif.sh`](./gif.sh) to generate the following gif us
 
 ## A brief history
 
-![an animated history of this CV](./anim.gif)
+![an animated history of this CV](./.github/anim.gif)

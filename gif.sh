@@ -76,4 +76,4 @@ for png in "${to_delete[*]}"; do
 done
 
 echo "creating final gif"
-convert -delay 20 -loop 0 pngs/*.png anim.gif
+convert -delay 20 -loop 0 pngs/*.png ./.github/anim.gif
