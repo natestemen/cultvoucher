@@ -1,4 +1,4 @@
-****# *C*ult *V*oucher
+# *C*ult *V*oucher
 
 My CV which will get me jobs/opportunities because it looks hot af and my name is pretty white.
 Please use this, and give me credit if you want, but pretty sure I stole half of this from other people, so do what you want.
