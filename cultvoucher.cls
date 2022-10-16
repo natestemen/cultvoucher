@@ -79,7 +79,7 @@
 \RequirePackage{xparse}
 \ExplSyntaxOn
 \NewDocumentEnvironment{entry} { m m m o o } {
-    \subsection{#1:} #2 \hfill \textcolor{darkgray}{\slshape #3}\par
+    \subsection{#1} #2 \hfill \textcolor{darkgray}{\slshape #3}\par
     \IfNoValueTF{#4}{}{#4}
     \IfNoValueTF{#5}{\begin{itemize}[itemsep=3pt,topsep=4pt]}{}
 }{
