@@ -15,20 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checking out this voucher
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Compiling voucher
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
-
-      - name: Copying voucher to server
-        uses: appleboy/scp-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          key: ${{ secrets.SSH }}
-          passphrase: ${{ secrets.PASSPHRASE }}
-          port: ${{ secrets.PORT }}
-          source: "main.pdf"
-          target: "~/latex/"
