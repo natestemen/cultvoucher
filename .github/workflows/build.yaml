@@ -21,3 +21,9 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
+        
+      - name: push to website
+        uses: GuillaumeFalourd/git-commit-push@v1
+        with:
+          files: main.pdf
+          remote_repository: https://github.com/natestemen/natestemen.xyz
