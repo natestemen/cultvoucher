@@ -27,3 +27,6 @@ jobs:
         with:
           files: main.pdf
           remote_repository: https://github.com/natestemen/natestemen.xyz
+          force: true
+          email: octocat@github.com
+          name: octocat
