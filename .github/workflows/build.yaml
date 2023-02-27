@@ -26,15 +26,15 @@ jobs:
       - name: Setup push to website
         run: |
           mkdir output
-          mv main.pdf output/cv.pdf
+          mv main.pdf cv.pdf
 
       - name: push to website repo
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
+        uses: actions/checkout@v3
         with:
-          source-directory: "output"
-          destination-github-username: "natestemen"
-          destination-repository-name: "natestemen.xyz"
-          user-name: octocat
-          user-email: octocat@github.com
+          ssh_key: ${{ secrets.SSH_DEPLOY_KEY }}
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add cv.pdf
+          git commit -m "CV update"
+          git push
