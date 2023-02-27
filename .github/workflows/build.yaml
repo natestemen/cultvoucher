@@ -20,12 +20,14 @@ jobs:
       - name: Compiling voucher
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: main.tex
-        
+          root_file: .tex
+      - name: Change pdf filename
+        run: mv main.pdf cv.pdf
+
       - name: push to website
         uses: GuillaumeFalourd/git-commit-push@v1
         with:
-          files: main.pdf
+          files: cv.pdf
           remote_repository: https://github.com/natestemen/natestemen.xyz
           force: true
           email: octocat@github.com

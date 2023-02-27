@@ -10,6 +10,6 @@
 *.fdb_latexmk
 *.fls
 *blx.bib
-*.pdf
+main.pdf
 *.synctex.gz
 *.png
