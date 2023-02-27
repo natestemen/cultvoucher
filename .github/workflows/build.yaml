@@ -23,18 +23,25 @@ jobs:
         with:
           root_file: main.tex
 
-      - name: Setup push to website
-        run: |
-          mkdir output
-          mv main.pdf cv.pdf
+      - uses: actions/upload-artifact@v3
+        with:
+          name: cv-pdf
+          path: main.pdf
 
-      - name: push to website repo
+      - name: checkout website repo
         uses: actions/checkout@v3
         with:
-          ssh_key: ${{ secrets.SSH_DEPLOY_KEY }}
-      - run: |
+          repository: natestemen/natestemen.xyz
+          ssh-key: ${{ secrets.SSH_DEPLOY_KEY }}
+
+      - uses: actions/download-artifact@v3
+        with:
+          name: cv-pdf
+
+      - name: push to website
+        run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add cv.pdf
+          git add *.pdf
           git commit -m "CV update"
           git push
