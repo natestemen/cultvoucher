@@ -22,14 +22,19 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
-      - name: Change pdf filename
-        run: mv main.pdf cv.pdf
 
-      - name: push to website
-        uses: GuillaumeFalourd/git-commit-push@v1
+      - name: Setup push to website
+        run: |
+          mkdir output
+          mv main.pdf output/cv.pdf
+
+      - name: push to website repo
+        uses: cpina/github-action-push-to-another-repository@v1
+        env:
+          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
         with:
-          files: cv.pdf
-          remote_repository: https://github.com/natestemen/natestemen.xyz
-          force: true
-          email: octocat@github.com
-          name: octocat
+          source-directory: "output"
+          destination-github-username: "natestemen"
+          destination-repository-name: "natestemen.xyz"
+          user-name: octocat
+          user-email: octocat@github.com
