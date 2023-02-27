@@ -20,7 +20,7 @@ jobs:
       - name: Compiling voucher
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: .tex
+          root_file: main.tex
       - name: Change pdf filename
         run: mv main.pdf cv.pdf
 
