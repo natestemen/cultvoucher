@@ -1,0 +1,23 @@
+name: Keep repo active
+
+on:
+  schedule:
+    - cron: "0 0 1 */1 *"
+  workflow_dispatch:
+
+jobs:
+  comment_on_issue:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install GitHub CLI
+      run: sudo apt-get install -y gh
+
+    - name: Authenticate GitHub CLI
+      run: gh auth login --with-token ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Post Comment
+      run: gh issue comment 21 --body "🌞 stayin alive 🌞"
