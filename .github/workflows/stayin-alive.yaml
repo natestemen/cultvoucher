@@ -8,16 +8,11 @@ on:
 jobs:
   comment_on_issue:
     runs-on: ubuntu-latest
-
+    permissions:
+      issues: write
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Install GitHub CLI
-      run: sudo apt-get install -y gh
-
-    - name: Authenticate GitHub CLI
-      run: gh auth login --with-token ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Post Comment
-      run: gh issue comment 21 --body "🌞 stayin alive 🌞"
+      - name: Add comment
+        run: gh issue comment 21 --body "🌞 stayin alive 🌞"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: natestemen/cultvoucher
