@@ -11,23 +11,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checking out this voucher
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Compiling voucher
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
 
       - name: Uploading voucher
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cv-pdf
           path: main.pdf
 
       - name: Checking out website repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-          repository: natestemen/natestemen.xyz
+          repository: natestemen/nates.place
           ssh-key: ${{ secrets.SSH_DEPLOY_KEY }}
 
       - name: Downloading voucher
