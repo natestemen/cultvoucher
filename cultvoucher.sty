@@ -24,17 +24,12 @@
 }
 
 % Bibliography categories
-\newcommand{\makebibcategory}[2]{
+\newcommand{\makebibcategory}[1]{
     \DeclareBibliographyCategory{#1}
-    \defbibheading{#1}{
-        \subsection{#2}
-    }
+    \defbibheading{#1}{}
 }
 
-\makebibcategory{books}{Books}
-\makebibcategory{papers}{Refereed Research Papers}
-\makebibcategory{presentations}{Conference Presentations}
-\makebibcategory{workshops}{Workshops}
+\makebibcategory{papers}
 
 \setlength{\bibitemsep}{3pt}
 \setlength{\bibhang}{.9cm}
