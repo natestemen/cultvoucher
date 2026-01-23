@@ -4,9 +4,9 @@
 \LoadClass[10pt]{article}
 
 \usepackage[
-    top    = 2cm,
+    top    = 1.5cm,
     bottom = 3cm,
-    left   = 5cm,
+    left   = 4cm,
     right  = 2cm,
 ]{geometry}
 
