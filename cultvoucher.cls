@@ -43,9 +43,9 @@
 \makebibcategory{papers}
 
 \setlength{\bibitemsep}{3pt}
-\setlength{\bibhang}{.9cm}
+\setlength{\bibhang}{0pt}
 
-\renewcommand*{\bibitem}{\addtocounter{papers}{1}\item \mbox{}\hskip-0.85cm\hbox to 0.85cm{\hfill\arabic{papers}.~~}}
+\renewcommand*{\bibitem}{\item[]}
 \defbibenvironment{bibliography}
 {\list{}
  {\setlength{\leftmargin}{\bibhang}%
