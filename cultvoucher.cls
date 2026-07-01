@@ -13,7 +13,59 @@
 \renewcommand{\baselinestretch}{1.1} 
 \renewcommand{\labelitemi}{\separator}
 
-\RequirePackage{cultvoucher}
+% Bibliography formatting
+\RequirePackage[
+    sorting      = ydnt,
+    bibstyle     = authoryear,
+    giveninits   = true,
+    uniquename   = init,
+    dashed       = false,
+    doi          = false,
+    isbn         = false,
+    backend      = biber,
+    defernumbers = true]{biblatex}
+
+\DeclareFieldFormat[article]{title}{#1}
+\DeclareFieldFormat[misc]{howpublished}{\textit{#1}}
+\DeclareFieldFormat[misc]{title}{#1}
+
+\renewbibmacro{in:}{
+    \ifentrytype{article}{}{
+        \printtext{\bibstring{in}\intitlepunct}
+    }
+}
+
+\newcommand{\makebibcategory}[1]{
+    \DeclareBibliographyCategory{#1}
+    \defbibheading{#1}{}
+}
+
+\makebibcategory{papers}
+
+\setlength{\bibitemsep}{3pt}
+\setlength{\bibhang}{.9cm}
+
+\renewcommand*{\bibitem}{\addtocounter{papers}{1}\item \mbox{}\hskip-0.85cm\hbox to 0.85cm{\hfill\arabic{papers}.~~}}
+\defbibenvironment{bibliography}
+{\list{}
+ {\setlength{\leftmargin}{\bibhang}%
+  \setlength{\itemsep}{\bibitemsep}%
+  \setlength{\parsep}{\bibparsep}}}
+{\endlist}
+{\bibitem}
+
+\newcommand{\printbib}[1]{
+    \printbibliography[category=#1,heading=#1]
+    \lastref{sumpapers}
+}
+
+\newcounter{papers}   \setcounter{papers}{0}
+\newcounter{sumpapers}\setcounter{sumpapers}{0}
+
+\newcommand{\lastref}[1]{\addtocounter{#1}{\value{papers}}\setcounter{papers}{0}}
+
+\nocite{*}
+
 \RequirePackage{moresize}
 \RequirePackage{booktabs}
 
