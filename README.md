@@ -8,18 +8,32 @@ I've use this to
 - apply for some jobs that never got back to me
 - get into grad school
 
+## Building
+
+You'll need a TeX Live installation (on Arch/Manjaro: `pacman -S texlive-meta biber`) and then just run:
+
+```
+latexmk
+```
+
+The `.latexmkrc` handles the rest.
+
 ## Features
 
 This repo also has two uses of [Github Actions](https://github.com/features/actions):
 
-1.  Build the PDF from `main.tex` and deploy to server via `ssh`
+1.  Build the PDF from `main.tex` and push it to my website repo.
 2.  Remind me to update the damn thing quarterly by opening a github issue automatically.
 
 These are done in [`build.yaml`](./.github/workflows/build.yaml) and [`remind.yaml`](./.github/workflows/remind.yaml) respectively.
-They have saved me a lot of `ssh`-ing which if I can avoid, I will.
 
 ## A brief history
 
 I've also written a script [`gif.sh`](./gif.sh) to generate the following gif using the git history.
+It requires [ImageMagick](https://imagemagick.org/) and [gifsicle](https://www.lcdf.org/gifsicle/):
+
+```
+bash gif.sh
+```
 
 ![an animated history of this CV](./.github/anim.gif)
