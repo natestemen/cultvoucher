@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cultvoucher}[11/13/2021 custom CV class]
+\ProvidesClass{cultvoucher}[2021/11/13 custom CV class]
 
 \LoadClass[10pt]{article}
 
@@ -57,15 +57,7 @@
 
 \newcommand{\printbib}[1]{
     \printbibliography[category=#1,heading=#1]
-    \lastref{sumpapers}
 }
-
-\newcounter{papers}   \setcounter{papers}{0}
-\newcounter{sumpapers}\setcounter{sumpapers}{0}
-
-\newcommand{\lastref}[1]{\addtocounter{#1}{\value{papers}}\setcounter{papers}{0}}
-
-\nocite{*}
 
 \RequirePackage{moresize}
 \RequirePackage{booktabs}
@@ -115,8 +107,11 @@
 \RequirePackage[strict]{changepage}
 \RequirePackage{enumitem}
 \RequirePackage{lastpage}
-\RequirePackage{datetime}
-\newdateformat{lowerdate}{\monthname[\THEMONTH] \THEYEAR}
+\newcommand{\monthyear}{%
+    \ifcase\month\or January\or February\or March\or April\or May\or June%
+    \or July\or August\or September\or October\or November\or December\fi
+    ~\the\year%
+}
 \setlist{nosep}
 
 \RequirePackage{fancyhdr}
@@ -124,7 +119,7 @@
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0.4pt}
-\fancyfoot[L]{\lowerdate\today}
+\fancyfoot[L]{\monthyear}
 \fancyfoot[C]{}
 \fancyfoot[R]{\thepage{}\ of\ \pageref*{LastPage}}
 
