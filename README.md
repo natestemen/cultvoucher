@@ -3,20 +3,14 @@
 My CV which will get me jobs/opportunities because it looks hot af and my name is pretty white.
 Please use this, and give me credit if you want, but pretty sure I stole half of this from other people, so do what you want.
 
-I've use this to
+I've used this to
 
 - apply for some jobs that never got back to me
-- get into grad school
+- get rejected from grad school
 
 ## Building
 
-You'll need [TeX Live](https://tug.org/texlive/) and [biber](https://biblatex-biber.sourceforge.net/), then just run:
-
-```
-latexmk
-```
-
-The `.latexmkrc` handles the rest.
+You'll need texlive and biber, then run `latexmk` in the root of the repo.
 
 ## Features
 
