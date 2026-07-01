@@ -50,7 +50,8 @@
 {\list{}
  {\setlength{\leftmargin}{\bibhang}%
   \setlength{\itemsep}{\bibitemsep}%
-  \setlength{\parsep}{\bibparsep}}}
+  \setlength{\parsep}{\bibparsep}%
+  \setlength{\topsep}{0pt}}}
 {\endlist}
 {\bibitem}
 
