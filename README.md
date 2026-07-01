@@ -10,7 +10,7 @@ I've use this to
 
 ## Building
 
-You'll need a TeX Live installation (on Arch/Manjaro: `pacman -S texlive-meta biber`) and then just run:
+You'll need [TeX Live](https://tug.org/texlive/) and [biber](https://biblatex-biber.sourceforge.net/), then just run:
 
 ```
 latexmk
