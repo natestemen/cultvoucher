@@ -37,8 +37,8 @@ jobs:
 
       - name: Pushing voucher to website
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config user.name 'carrier pigeon'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
 
           mv main.pdf public/static/cv.pdf
           git add public/static/cv.pdf

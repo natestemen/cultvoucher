@@ -12,9 +12,13 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Push empty commit
+      - name: Push empty commit if needed
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git commit --allow-empty -m "keepalive"
-          git push
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          last=$(git log -1 --format=%ct)
+          days=$(( ($(date +%s) - last) / 86400 ))
+          if [ $days -ge 50 ]; then
+            git commit --allow-empty -m "keepalive"
+            git push
+          fi
