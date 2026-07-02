@@ -6,13 +6,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  comment_on_issue:
+  keepalive:
     runs-on: ubuntu-latest
     permissions:
-      issues: write
+      contents: write
     steps:
-      - name: Add comment
-        run: gh issue comment 21 --body "🌞 stayin alive 🌞"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_REPO: natestemen/cultvoucher
+      - uses: actions/checkout@v4
+      - name: Push empty commit
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git commit --allow-empty -m "keepalive"
+          git push
