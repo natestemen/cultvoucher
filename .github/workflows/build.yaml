@@ -42,5 +42,5 @@ jobs:
 
           mv main.pdf public/static/cv.pdf
           git add public/static/cv.pdf
-          git commit -m "CV update"
+          git commit -m "resume delivery"
           git push
