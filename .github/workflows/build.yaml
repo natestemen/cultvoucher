@@ -6,6 +6,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   issue_voucher:
     runs-on: ubuntu-latest
@@ -18,29 +21,19 @@ jobs:
         with:
           root_file: main.tex
 
-      - name: Uploading voucher
-        uses: actions/upload-artifact@v4
+      - name: Renaming voucher
+        run: mv main.pdf cv.pdf
+
+      - name: Publishing voucher release
+        uses: softprops/action-gh-release@v2
         with:
-          name: cv-pdf
-          path: main.pdf
+          tag_name: latest
+          name: Latest CV
+          files: cv.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Checking out website repo
-        uses: actions/checkout@v4
-        with:
-          repository: natestemen/nates.place
-          ssh-key: ${{ secrets.SSH_DEPLOY_KEY }}
-
-      - name: Downloading voucher
-        uses: actions/download-artifact@v4.1.7
-        with:
-          name: cv-pdf
-
-      - name: Pushing voucher to website
-        run: |
-          git config user.name 'carrier pigeon'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
-
-          mv main.pdf public/static/cv.pdf
-          git add public/static/cv.pdf
-          git commit -m "resume delivery"
-          git push
+      - name: Delivering voucher to website
+        run: gh workflow run deploy.yml --repo natestemen/nates.place
+        env:
+          GH_TOKEN: ${{ secrets.NATES_PLACE_DISPATCH_TOKEN }}
